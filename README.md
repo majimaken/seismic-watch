@@ -14,7 +14,7 @@ cd seismic-watch
 .\venv\Scripts\activate
 
 # Install necessary libraries
-pip install streamlit numpy matplotlib
+pip install requirements.txt
 
 # Run app
 streamlit run app.py
