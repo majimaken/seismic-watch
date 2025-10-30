@@ -6,7 +6,8 @@ import numpy as np
 # --- 1. DATA RETRIEVAL AND PREPARATION ---
 # USGS API Endpoint: All earthquakes from the last hour
 # Note: This is a low-latency, real-time data source.
-USGS_API_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson" 
+# USGS_API_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson" 
+USGS_API_URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson" 
 
 @st.cache_data(ttl=60)  # Caching the data load function for 60 seconds to reduce API load
 def load_earthquake_data():
@@ -70,7 +71,7 @@ df_earthquakes = load_earthquake_data()
 
 # Page configuration for optimal dashboard viewing
 st.set_page_config(layout="wide", page_title="Earthquake Live Dashboard")
-st.title("🌍 Global Earthquake Activity (last hour)")
+st.title("🌍 Global Earthquake Activity (last 24 h)")
 
 # Metrics and Refresh Button Layout for monitoring data freshness
 col_refresh, col_count, col_time = st.columns([1, 2, 3])
