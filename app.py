@@ -125,7 +125,7 @@ if not df_earthquakes.empty:
     
     # Interactive filtering mechanism
     min_mag_filter = st.slider(
-        "Filter Earthquakes Stronger Than", 
+        "Show Earthquakes Stronger Than", 
         min_value=0.0, 
         max_value=float(max_mag if max_mag > 0 else 5.0), 
         value=0.0, 
@@ -163,9 +163,6 @@ if not df_earthquakes.empty:
         
         # Display the DataFrame as a static table for better readability
         st.table(legend_df.set_index('Column Name'))
-
-
-    st.caption(f"Showing results with magnitude ≥ {min_mag_filter}")
 
 else:
     # Message indicating a pipeline failure or expected empty result set
