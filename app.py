@@ -11,6 +11,13 @@ from modules.config import DISPLAY_COLS, COLUMN_LEGEND
 def show_dashboard(df_earthquakes, max_mag):
     """Shows the main map dashboard and filtering interface."""
     st.title("Global Earthquake Activity (Last 24 Hours)")
+
+    st.markdown(
+    """
+    This dashboard displays all recorded **global earthquake events** from the past 24 hours. \\
+    You can use the sidebar navigation to switch to the **More Context** view for in-depth analysis and charting.
+    """
+    )
     
     # Metrics and Refresh Button Layout
     col_refresh, col_count, col_time = st.columns([1, 2, 3])
