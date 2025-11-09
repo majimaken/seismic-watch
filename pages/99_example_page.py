@@ -97,7 +97,7 @@ if not st.session_state['error']:
     ax.axvline(x=x_val, color='red', linestyle='--', linewidth=0.8)
     ax.set_xlabel('x')
     ax.set_ylabel('f(x)')
-    ax.set_title("Plot of the User-Defined Function")
+    ax.set_title("Plot of the Function")
     ax.grid(True, linestyle=':', alpha=0.6)
     ax.legend()
     st.pyplot(fig)
