@@ -3,6 +3,13 @@
 ## Overview
 This repository hosts the Streamlit application for **Seismic Watch** and is designed for visualizing live earthquake data. 
 
+### Release Pipeline:
+- Interactive map with filtering and tooltips
+- New page with focus on region (user can select the top 10 active regions)
+- Information page
+- Information page with:
+Tsunami Events Map: If a tsunami event is present (tsunami: 1), filter the data and display a dedicated map for those high-risk events. Richter Scale Context: Use an expander to provide a clear, detailed table explaining the typical effects associated with different magnitude ranges (e.g., Mag 5.0-5.9 = Moderate, felt widely, minor damage). Depth Hazard Explanation: Use an image tag like `` to visually explain the difference between shallow (crustal) and deep (slab) earthquakes.
+
 ## Installation
 
 ### 1. Getting Started
